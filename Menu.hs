@@ -34,6 +34,8 @@ casos n = do
 ser 0 = 0
 ser 1 = 1
 ser n = ser (n-1) + ser (n-2)
+--fib n = fibs !! n
+--fibs = 1 : 1 : zipWith (+) fibs  (tail fibs)
 seriefibo = do 
         putStrLn "Dame la posición que quieres imprimir "
         t <- getLine
@@ -86,11 +88,10 @@ desaparecer = do
         putStrLn "Comenzando a desaparecer los números"
         condicional 11
 condicional n = do
-        let nombres = [0,1,2,3,4,5,6,7,8,9,10]
+        let array = [0,1,2,3,4,5,6,7,8,9,10]
         if n >= 1
         then do
-            --let bInt = read b :: Int
-            print (take n nombres)
+            print (take n array)
             condicional(n-1)
         else do
             putStrLn ("Todos los números han desaparecido")
