@@ -34,8 +34,6 @@ casos n = do
 ser 0 = 0
 ser 1 = 1
 ser n = ser (n-1) + ser (n-2)
---fib n = fibs !! n
---fibs = 1 : 1 : zipWith (+) fibs  (tail fibs)
 seriefibo = do 
         putStrLn "Dame la posición que quieres imprimir "
         t <- getLine
